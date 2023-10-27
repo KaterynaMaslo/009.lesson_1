@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="randomImg" src="" alt="Random image" style="width: 400px; display: block; margin: auto;">
+    <script>
+        function showRandomImage() {
+            const imgFolder = "images/";
+            const maxImgs = 9;
+            const randomImg = Math.floor(Math.random() * maxImgs) + 1;
+            const randomImgSrc = imgFolder + randomImg + ".jpg";
+
+            const imgElement = document.getElementById("randomImg");
+            imgElement.src = randomImgSrc;
+        }
+        showRandomImage();
+    </script>
+</body>
+</html>
